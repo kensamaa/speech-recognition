@@ -6,7 +6,7 @@ const speechrecognition= window.speechrecognition || window.webkitSpeechRecognit
 const recognition=new speechrecognition();
 
 const greetings=['i m good thanks','i m doing good','not bad'];
-const answerhaj='she is very pretty and sexy with a big pussy but her head is like a rock and she gets angry so fast';
+
 const fu=['dont be sad you are strong','no its ok just ignore the world','i m here for you','no stop be happy'];
 recognition.onstart=function(){
     console.log("voice activated you can talk to microphone");
@@ -35,11 +35,6 @@ function readLoud(message){
         const textt=greetings[Math.floor(Math.random()*greetings.length)];
         him.textContent=textt;
         speech.text=textt;
-    }
-    else if(message.includes('what do you think')){
-        speech.text=answerhaj;
-        him.textContent=answerhaj;
-
     }
     else if(message.includes('sad')){
         const textt=fu[Math.floor(Math.random()*greetings.length)];
